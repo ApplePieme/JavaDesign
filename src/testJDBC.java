@@ -9,9 +9,9 @@ public class testJDBC {
         String user="root";
         String password="123456";
         try{
-            Class.forName(Driver);
+            Class.forName("com.mysql.jdbc.Driver");
             try{
-                Connection connection= DriverManager.getConnection(url,user,password);
+                Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/myba","root","123456");
                 System.out.println(connection);
             }catch (SQLException e){
                 e.printStackTrace();
