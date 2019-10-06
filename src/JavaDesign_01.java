@@ -56,9 +56,8 @@ class Inquire {
             System.out.println("关于“" + str + "”的查找结果：");
             if (!rs.next())//若结果集为空，则输出查无此人
                 System.err.println("查无此人!");
-            else {
+            else
                 showRecord(rs);//结果集不为空就把对象传给showRecord方法输出
-            }
             ps.close();
         } catch (SQLException e) {
             e.printStackTrace();
