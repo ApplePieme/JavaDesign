@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="329805d3-1ccd-4751-9198-3840cca6f5a6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaDesign/JavaDesign_02.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaDesign/JavaDesign_02.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JavaDesign_02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaDesign_02.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/src/JavaDesign_02.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="177">
-              <caret line="79" column="33" lean-forward="true" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
+              <caret line="88" column="32" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,8 +71,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,16 +183,19 @@
       <workItem from="1571641309663" duration="140000" />
       <workItem from="1572263964836" duration="4142000" />
       <workItem from="1572319978516" duration="2304000" />
+      <workItem from="1572322458682" duration="320000" />
+      <workItem from="1572439213150" duration="36000" />
+      <workItem from="1572439376511" duration="44000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21796000" />
+    <option name="totallyTimeSpent" value="22196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29758713" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30965146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -261,7 +266,7 @@
     <entry file="file://$PROJECT_DIR$/src/JavaDesign_02.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
-          <caret line="79" column="33" lean-forward="true" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
+          <caret line="88" column="32" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

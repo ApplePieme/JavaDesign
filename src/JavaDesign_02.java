@@ -75,7 +75,7 @@ public class JavaDesign_02 {
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setLocationRelativeTo(null);
         Container container = f.getContentPane();
-        container.setLayout(new FlowLayout());
+        container.setLayout(new GridLayout(2,2));
         JPanel[] panels = new JPanel[2];
         panels[0] = new JPanel();
         panels[0].setLayout(new GridLayout(3, 6));
