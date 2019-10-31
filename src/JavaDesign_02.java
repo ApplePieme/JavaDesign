@@ -47,6 +47,55 @@ public class JavaDesign_02 {
                 }
             }
         }*/
+
+//    public void launchFrame(){
+//        JFrame f = new JFrame("小球运动程序");
+//        f.setVisible(true);
+//        f.setSize(800, 800);
+//        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        f.setLocationRelativeTo(null);
+//        Container container = f.getContentPane();
+//    }
+
+    public void launchFrame(Circle c) {
+        JFrame frame = new JFrame("小球运动程序");
+        frame.setVisible(true);
+        frame.setSize(600, 600);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        Container container = frame.getContentPane();
+        GridBagLayout gridBagLayout = new GridBagLayout();
+        container.setLayout(gridBagLayout);
+        int[] gridx = {0, 0, 0, 1, 1, 1};
+        int[] gridy = {0, 1, 2, 0, 1, 2};
+        int[] gridwidth = {1, 1, 1, GridBagConstraints.REMAINDER, GridBagConstraints.REMAINDER, GridBagConstraints.REMAINDER};
+        int[] gridheight = {1, 1, 1, 1, 1, 1};
+        GridBagConstraints gridBagConstraints = new GridBagConstraints();
+        JTextField[] textFields = {new JTextField("小球半径", 8), new JTextField("小球初速度", 8), new JTextField("小球加速度", 8),
+                new JTextField(10), new JTextField(10), new JTextField(10)};
+        textFields[0].setEditable(false);
+        textFields[1].setEditable(false);
+        textFields[2].setEditable(false);
+        for (int i = 0; i < gridx.length; i++) {
+            gridBagConstraints.gridx = gridx[i];
+            gridBagConstraints.gridy = gridy[i];
+            gridBagConstraints.gridwidth = gridwidth[i];
+            gridBagConstraints.gridheight = gridheight[i];
+            gridBagConstraints.fill = GridBagConstraints.BOTH;
+            gridBagLayout.setConstraints(textFields[i], gridBagConstraints);
+            container.add(textFields[i]);
+        }
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = GridBagConstraints.REMAINDER;
+        gridBagConstraints.gridheight = 6;
+        gridBagConstraints.fill = GridBagConstraints.BOTH;
+        gridBagLayout.setConstraints(c, gridBagConstraints);
+        container.add(c);
+        Thread thread = new Thread(c);
+        thread.start();
+    }
+
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         /*JFrame f = new JFrame();
@@ -69,13 +118,13 @@ public class JavaDesign_02 {
         c.add(circle);
         Thread th = new Thread(circle);
         th.start();*/
-        JFrame f = new JFrame("小球运动程序");
+        /*JFrame f = new JFrame("小球运动程序");
         f.setVisible(true);
         f.setSize(800, 800);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setLocationRelativeTo(null);
         Container container = f.getContentPane();
-        container.setLayout(new GridLayout(2,2));
+        container.setLayout(new GridLayout(2, 2));
         JPanel[] panels = new JPanel[2];
         panels[0] = new JPanel();
         panels[0].setLayout(new GridLayout(3, 6));
@@ -93,7 +142,10 @@ public class JavaDesign_02 {
         Circle circle = new Circle();
         panels[1].add(circle);
         Thread thread = new Thread(circle);
-        thread.start();
+        thread.start();*/
+        JavaDesign_02 javaDesign_02 = new JavaDesign_02();
+        Circle circle = new Circle();
+        javaDesign_02.launchFrame(circle);
     }
 }
 
@@ -101,7 +153,7 @@ class Circle extends JPanel implements Runnable {
 
     private double x = 0;
     private double y = 0;
-    private int r = 80;
+    private int r = 10;
     double degree = Math.PI / 3;
     double speed = 1;
     boolean right = true;
@@ -118,13 +170,22 @@ class Circle extends JPanel implements Runnable {
         if (x > 10000+r || x < r)
             degree = Math.PI - degree;*/
 
-        if (right)
+        /*if (right)
             x += 10;
         else
             x -= 10;
-        if (x > 800 - 2 * r)
+        if (x > 200 - 2 * r)
             right = false;
         if (x < r)
+            right = true;*/
+
+        if (right)
+            y += 10;
+        else
+            y -= 10;
+        if (y > 200 - 2 * r)
+            right = false;
+        if (y < r)
             right = true;
     }
 
