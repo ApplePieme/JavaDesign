@@ -5,8 +5,7 @@ public class JavaDesign_02 {
 
     public void launchFrame(Circle c) {
         JFrame frame = new JFrame("小球发射程序");
-        frame.setVisible(true);
-        frame.setSize(800, 800);
+        frame.setSize(520, 520);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         Container container = frame.getContentPane();
@@ -23,8 +22,10 @@ public class JavaDesign_02 {
         for (int i = 0; i < 6; i++) {
             panel.add(t[i]);
         }
+        frame.setVisible(true);
         Thread thread = new Thread(c);
         thread.start();
+
     }
 
     public static void main(String[] args) {
@@ -46,7 +47,7 @@ class Circle extends JPanel implements Runnable {
 
     public void paint(Graphics g) {
         super.paint(g);
-        g.drawOval((int) x, (int) y, r, r);
+        g.fillOval((int) x, (int) y, r, r);
         //x += 10;
         //r += 1;
         /*x = x + speed * Math.cos(degree);
@@ -56,14 +57,14 @@ class Circle extends JPanel implements Runnable {
         if (x > 10000+r || x < r)
             degree = Math.PI - degree;*/
 
-        /*if (right)
+        if (right)
             x += 10;
         else
             x -= 10;
         if (x > 800 - 2 * r)
             right = false;
         if (x < r)
-            right = true;*/
+            right = true;
 
         if (right)
             y += 10;
