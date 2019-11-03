@@ -38,26 +38,24 @@ public class JavaDesign_02 {
 
 class Circle extends JPanel implements Runnable {
 
-    private double x = 0;
-    private double y = 0;
-    private int r = 10;
-    double degree = Math.PI / 3;
-    double speed = 1;
+    private int r = 90;
+    private double x = 100;
+    private double y = 100;
+    double degree = 2*Math.PI *Math.random();
+    double speed = 30;
     boolean right = true;
 
     public void paint(Graphics g) {
         super.paint(g);
-        g.fillOval((int) x, (int) y, r, r);
-        //x += 10;
-        //r += 1;
-        /*x = x + speed * Math.cos(degree);
+        g.fillOval((int) (x-r), (int) (y-r), r, r);
+        x = x + speed * Math.cos(degree);
         y = y + speed * Math.sin(degree);
-        if (y > 10000-r || y < r)
+        if (y > 450 || y < r)
             degree = -degree;
-        if (x > 10000+r || x < r)
-            degree = Math.PI - degree;*/
+        if (x > 500 || x < r)
+            degree = Math.PI - degree;
 
-        if (right)
+        /*if (right)
             x += 10;
         else
             x -= 10;
@@ -73,7 +71,7 @@ class Circle extends JPanel implements Runnable {
         if (y > 800 - 2 * r)
             right = false;
         if (y < r)
-            right = true;
+            right = true;*/
     }
 
     public void run() {
