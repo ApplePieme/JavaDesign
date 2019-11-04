@@ -39,20 +39,21 @@ public class JavaDesign_02 {
 class Circle extends JPanel implements Runnable {
 
     private int r = 90;
-    private double x = 100;
-    private double y = 100;
-    double degree = 2*Math.PI *Math.random();
+    private double x = 500 * Math.random();
+    private double y = 500 * Math.random();
+    double degree = 2 * Math.PI * Math.random();
     double speed = 30;
     boolean right = true;
+    boolean flag=true;
 
     public void paint(Graphics g) {
         super.paint(g);
-        g.fillOval((int) (x-r), (int) (y-r), r, r);
+        g.fillOval((int) (x - r), (int) (y - r), 2*r, 2*r);
         x = x + speed * Math.cos(degree);
         y = y + speed * Math.sin(degree);
-        if (y > 450 || y < r)
+        if (y > 500-r || y < r)
             degree = -degree;
-        if (x > 500 || x < r)
+        if (x > 500-r || x < r)
             degree = Math.PI - degree;
 
         /*if (right)
