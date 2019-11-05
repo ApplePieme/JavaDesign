@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="329805d3-1ccd-4751-9198-3840cca6f5a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/javaDesign_02/Ball.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/javaDesign_02/BallFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/javaDesign_02/BallListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaDesign/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaDesign/Circle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JavaDesign_02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaDesign_02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaDesign/Circle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaDesign/JavaDesign_02.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaDesign/testJDBC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JavaDesign_02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaDesign_02/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaDesign_02/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaDesign_02/BallFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaDesign_02/BallFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaDesign_02/BallListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaDesign_02/BallListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testJDBC.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,14 +30,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/javaDesign_02/BallFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-247">
-              <caret line="14" column="66" lean-forward="true" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
+            <state relative-caret-position="760">
+              <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#154#160#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -44,23 +45,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javaDesign_02/Ball.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="29" column="61" lean-forward="true" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+            <state relative-caret-position="171">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
               <folding>
+                <element signature="e#492#493#0" expanded="true" />
                 <element signature="e#518#519#0" expanded="true" />
+                <element signature="e#1139#1140#0" expanded="true" />
                 <element signature="e#1163#1164#0" expanded="true" />
+                <element signature="e#1191#1192#0" expanded="true" />
                 <element signature="e#1215#1216#0" expanded="true" />
+                <element signature="e#1240#1241#0" expanded="true" />
                 <element signature="e#1264#1265#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javaDesign_02/BallListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+            <state relative-caret-position="190">
+              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,9 +94,9 @@
         <option value="$PROJECT_DIR$/src/testJDBC.java" />
         <option value="$PROJECT_DIR$/src/JavaDesign_01.java" />
         <option value="$PROJECT_DIR$/src/JavaDesign_02.java" />
-        <option value="$PROJECT_DIR$/src/javaDesign_02/BallFrame.java" />
-        <option value="$PROJECT_DIR$/src/javaDesign_02/Ball.java" />
         <option value="$PROJECT_DIR$/src/javaDesign_02/BallListener.java" />
+        <option value="$PROJECT_DIR$/src/javaDesign_02/Ball.java" />
+        <option value="$PROJECT_DIR$/src/javaDesign_02/BallFrame.java" />
       </list>
     </option>
   </component>
@@ -107,7 +112,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,12 +128,13 @@
               <item name="JavaDesign" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaDesign" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaDesign_02.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+              <item name="javaDesign_02" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -246,16 +251,19 @@
       <workItem from="1572657922409" duration="1299000" />
       <workItem from="1572744306539" duration="1828000" />
       <workItem from="1572849728491" duration="8990000" />
+      <workItem from="1572858929861" duration="139000" />
+      <workItem from="1572863297898" duration="77000" />
+      <workItem from="1572951629151" duration="3321000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40921000" />
+    <option name="totallyTimeSpent" value="44458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33109918" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34517425" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -303,16 +311,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test.java" />
-    <entry file="file://$PROJECT_DIR$/src/testJDBC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testJDBC.java" />
     <entry file="file://$PROJECT_DIR$/src/JavaDesign_01.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1197">
@@ -337,16 +336,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JavaDesign_02.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-399">
-          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaDesign_02.java" />
     <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.desktop/java/awt/Component.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -358,25 +348,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javaDesign_02/BallFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-247">
-          <caret line="14" column="66" lean-forward="true" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#154#160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/javaDesign_02/Ball.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" column="61" lean-forward="true" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+        <state relative-caret-position="171">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
           <folding>
+            <element signature="e#492#493#0" expanded="true" />
             <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#1139#1140#0" expanded="true" />
             <element signature="e#1163#1164#0" expanded="true" />
+            <element signature="e#1191#1192#0" expanded="true" />
             <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1240#1241#0" expanded="true" />
             <element signature="e#1264#1265#0" expanded="true" />
           </folding>
         </state>
@@ -384,8 +367,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/javaDesign_02/BallListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+        <state relative-caret-position="190">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaDesign_02/BallFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
