@@ -18,8 +18,6 @@ public class BallFrame extends JPanel {
         container.setLayout(new BorderLayout());      //容器设置为边界布局
         JPanel panel = new JPanel();      //再创建一个面板，用来放文本框
         panel.setLayout(new GridLayout(3, 6));      //面板的布局设置为网格布局方便放置文本框
-//        JTextField[] t = {new JTextField("小球半径", 8), new JTextField(15), new JTextField("小球初速度", 8),
-//                new JTextField(15), new JTextField("小球加速度", 8), new JTextField(15)};//用数组存放创建的文本框
         t[0].setEditable(false);    //把带字的文本框设置为不可编辑
         t[2].setEditable(false);
         t[4].setEditable(false);
