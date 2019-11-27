@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="329805d3-1ccd-4751-9198-3840cca6f5a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javaDesign_03/GetFileIcon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javaDesign_03/GetFileNames.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javaDesign_03/MainForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javaDesign_03/MemoryInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javaDesign_03/MyCellRenderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/JavaDesign.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/JavaDesign.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaDesign.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDesign.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JavaDesign/Inquire.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaDesign/Inquire.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JavaDesign/javaDesign_02/BallFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaDesign/javaDesign_02/BallFrame.class" afterDir="false" />
     </list>
@@ -27,7 +29,24 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/javaDesign_03/MainForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="238" lean-forward="true" selection-start-line="238" selection-end-line="238" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#569#585#0" expanded="true" />
+                <element signature="e#3686#4702#0" expanded="true" />
+                <element signature="e#4701#4702#0" expanded="true" />
+                <element signature="e#8567#8568#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -54,6 +73,13 @@
         <option value="$PROJECT_DIR$/src/BLL/FilesTree.java" />
         <option value="$PROJECT_DIR$/src/UI/FileProperties.java" />
         <option value="$PROJECT_DIR$/src/javaDesign_03(study)/BLL/FilesTree.java" />
+        <option value="$APPLICATION_HOME_DIR$/bin/idea.exe.vmoptions" />
+        <option value="$APPLICATION_HOME_DIR$/bin/idea64.exe.vmoptions" />
+        <option value="$PROJECT_DIR$/src/javaDesign_03/MemoryInfo.java" />
+        <option value="$PROJECT_DIR$/src/javaDesign_03/GetFileIcon.java" />
+        <option value="$PROJECT_DIR$/src/javaDesign_03/MyCellRenderer.java" />
+        <option value="$PROJECT_DIR$/src/javaDesign_03/GetFileNames.java" />
+        <option value="$PROJECT_DIR$/src/javaDesign_03/MainForm.java" />
       </list>
     </option>
   </component>
@@ -68,6 +94,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -86,19 +114,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="javaDesign_02" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="JavaDesign" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaDesign" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="javaDesign_03" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaExercise" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -110,7 +142,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propGUI" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -124,7 +156,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MainForm">
+  <component name="RunManager" selected="Application.MainForm (1)">
     <configuration name="BallFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="javaDesign_02.BallFrame" />
       <module name="JavaDesign" />
@@ -151,16 +183,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavaDesign_01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JavaDesign_01" />
+    <configuration name="JavaDesign_02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JavaDesign_02" />
       <module name="JavaDesign" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavaDesign_02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JavaDesign_02" />
+    <configuration name="MainForm (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaDesign_03.MainForm" />
       <module name="JavaDesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaDesign_03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -180,11 +218,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainForm (1)" />
         <item itemvalue="Application.MainForm" />
         <item itemvalue="Application.FilesTree" />
         <item itemvalue="Application.BallFrame" />
         <item itemvalue="Application.JavaDesign_02" />
-        <item itemvalue="Application.JavaDesign_01" />
       </list>
     </recent_temporary>
   </component>
@@ -232,16 +270,19 @@
       <workItem from="1573901002993" duration="1092000" />
       <workItem from="1573959668301" duration="2578000" />
       <workItem from="1573962879076" duration="620000" />
+      <workItem from="1574836306008" duration="1012000" />
+      <workItem from="1574837378245" duration="11227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53543000" />
+    <option name="totallyTimeSpent" value="65782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39075068" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.40147454" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -377,6 +418,75 @@
     <entry file="file://$PROJECT_DIR$/src/javaDesign_03(study)/BLL/DriveChart.java" />
     <entry file="file://$PROJECT_DIR$/src/javaDesign_03(study)/BLL/DirectoryInfo.java" />
     <entry file="file://$PROJECT_DIR$/src/javaDesign_03(study)/UI/MainForm.java" />
+    <entry file="file://$APPLICATION_HOME_DIR$/bin/idea64.exe.vmoptions">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/bin/idea.exe.vmoptions">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaDesign_03/GetFileIcon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="71" lean-forward="true" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaDesign_03/MemoryInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaDesign_03/MyCellRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#232#233#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaDesign_03/GetFileNames.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaDesign_03/MainForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="238" lean-forward="true" selection-start-line="238" selection-end-line="238" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#569#585#0" expanded="true" />
+            <element signature="e#3686#4702#0" expanded="true" />
+            <element signature="e#4701#4702#0" expanded="true" />
+            <element signature="e#8567#8568#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
