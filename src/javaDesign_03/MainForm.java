@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.Stack;
 
 public class MainForm extends JFrame implements ActionListener {
+    public static MainForm _instance;
     public Stack<String> stack, stackReturn;
     public JList<String> list;
     public String curURL = "";
@@ -27,15 +28,18 @@ public class MainForm extends JFrame implements ActionListener {
     JPopupMenu jPopupMenu1 = null;
     JPopupMenu jPopupMenu2 = null;
     JPopupMenu jPopupMenu3 = null;
-    JMenuItem[] jMenuItems1 = new JMenuItem[5];
+    JMenuItem[] jMenuItems1 = new JMenuItem[2];
     JMenuItem jMenuItems2;
     JMenuItem delete;
     public DefaultListModel defaultListModel;
     public Icon[] allIcons = new Icon[999999];
     public int iconCounter = 0;
     Boolean isSearching = false;
+    String preURL = "";
+    String latURL = "";
 
     public MainForm() {
+        this._instance = this;
         this.setTitle("文件管理器");
         this.setBounds(500, 500, 1010, 650);
         this.getContentPane().setLayout(null);
@@ -111,10 +115,9 @@ public class MainForm extends JFrame implements ActionListener {
         jPopupMenu1 = new JPopupMenu();       //文件和文件夹的属性菜单
         jPopupMenu2 = new JPopupMenu();       //磁盘的属性菜单
         jPopupMenu3 = new JPopupMenu();
-        jMenuItems1[0] = new JMenuItem("打开");
-        jMenuItems1[1] = new JMenuItem("删除");
-        jMenuItems1[2] = new JMenuItem("重命名");
-        for (int i = 0; i < 3; ++i) {
+        jMenuItems1[0] = new JMenuItem("删除");
+        jMenuItems1[1] = new JMenuItem("重命名");
+        for (int i = 0; i < 2; ++i) {
             jMenuItems1[i].addActionListener(this);
             jPopupMenu1.add(jMenuItems1[i]);
         }
@@ -236,7 +239,129 @@ public class MainForm extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        if (e.getSource() == preBtn) {
+            latURL = curURL;
+            if (!stack.isEmpty()) {
+                stack.pop();
+                stackReturn.push(curURL);
+                if (!stack.isEmpty()) {
+                    curURL = stack.peek();
+                } else {
+                    curURL = "";
+                }
+                GoThere();
+            }
+            if (isSearching) {
+                isSearching = false;
+            }
+        } else if (e.getSource() == latBtn) {
+            if (!stackReturn.isEmpty()) {
+                curURL = stackReturn.peek();
+                stackReturn.pop();
+                stack.push(curURL);
+                GoThere();
+            }
+            if (isSearching) {
+                isSearching = false;
+            }
+        } else if (e.getSource() == jMenuItems2) {
+            if (!isSearching) {
+                String url = curURL + list.getSelectedValue();
+                if (curURL != "") {
+                    url += "\\";
+                }
+                File file = new File(url);
+                if (file.isDirectory()) {
+                    twoClick(url);
+                } else {
+                    OpenIt(file);
+                }
+            } else {
+                File file = new File(maps.get(list.getSelectedValue()));
+                OpenIt(file);
+            }
+        } else if (e.getSource() == jMenuItems1[0]) {
+            File file = new File(curURL + "/" + list.getSelectedValue());
+            int n;
+            if (file.isFile()) {
+                n = JOptionPane.showConfirmDialog(null, "确定要删除文件" + file.getName() + "么？", "文件删除", JOptionPane.YES_NO_OPTION);
+            } else {
+                n = JOptionPane.showConfirmDialog(null, "确定要删除" + file.getName() + "及其目录下的文件么？", "文件夹删除", JOptionPane.YES_NO_OPTION);
+            }
+            if (n == 0) {
+                FileDelete.delete(curURL + list.getSelectedValue() + "\\");
+                GoThere();
+            }
+        } else if (e.getSource() == delete) {
+            List<String> selectedStr = list.getSelectedValuesList();
+            File file;
+            int num = selectedStr.size();
+            int n = JOptionPane.showConfirmDialog(null, "确认要删除" + selectedStr.get(0) + "等" + num + "项么？", "文件删除", JOptionPane.YES_NO_OPTION);
+            if (n == 0) {
+                if (isSearching) {
+                    for (int i = 0; i < selectedStr.size(); ++i) {
+                        file = new File(maps.get(selectedStr.get(i)));
+                        FileDelete.delete(file.getAbsolutePath());
+                    }
+                } else {
+                    for (int i = 0; i < selectedStr.size(); ++i) {
+                        FileDelete.delete(curURL + selectedStr.get(i) + "\\");
+                    }
+                    GoThere();
+                }
+            }
+        } else if (e.getSource() == jMenuItems1[1]) {
+            String before = list.getSelectedValue();
+            File file = new File(curURL + before + "\\");
+            String after = "";
+            if (file.isDirectory()) {
+                after = (String) JOptionPane.showInputDialog(null, "请输入新文件夹名：\n", "重命名", JOptionPane.PLAIN_MESSAGE, null, null, list.getSelectedValue());
+            } else {
+                after = (String) JOptionPane.showInputDialog(null, "请输入新文件名：\n", "重命名", JOptionPane.PLAIN_MESSAGE, null, null, list.getSelectedValue());
+            }
+            if (before != after && after != null) {
+                new File(curURL + before + "\\").renameTo(new File(curURL + after + "\\"));
+                GoThere();
+            } else {
+                GoThere();
+            }
+        } else if (e.getSource() == goBtn || e.getSource() == GuideText) {
+            String url = GuideText.getText();
+            if (url.length() > 0) {
+                File file = new File(url);
+                if (file.exists()) {
+                    stack.push(curURL);
+                    curURL = url;
+                    GoThere();
+                } else {
+                    JOptionPane.showConfirmDialog(null, "没有找到该目录！", "确认对话框", JOptionPane.YES_OPTION);
+                }
+            } else {
+                Home_List();
+            }
+        } else if (e.getSource() == SearchText) {
+            boolean flagDir = false;
+            boolean flagFile = false;
+            if (fileCheck.isSelected()) {
+                flagFile = true;
+            }
+            if (dirCheck.isSelected()) {
+                flagDir = true;
+            }
+            if (!(flagFile || flagDir)) {
+                JOptionPane.showMessageDialog(null, "请至少选择一个搜索类别！", "确认对话框", JOptionPane.YES_OPTION);
+            } else {
+                isSearching = true;
+                maps.clear();
+                isSearching = true;
+                defaultListModel.clear();
+                iconCounter = 0;
+                allIcons = new Icon[999999];
+                FileSearch.bfsSearchFile(curURL, SearchText.getText(), flagDir, flagFile);
+                list.setModel(defaultListModel);
+                list.setCellRenderer(new MyCellRenderer(allIcons));
+            }
+        }
     }
 
     public static void main(String[] args) {
